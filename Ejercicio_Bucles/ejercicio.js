@@ -55,6 +55,3 @@ for (let i in datos) {
         console.log(datos[i].nombre + " " + datos[i].apellidos);
     }
 }
-
-
-var profesor = {}
