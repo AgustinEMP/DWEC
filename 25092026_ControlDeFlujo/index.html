@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="codigo.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+    <form name="selectForm">
+        <p>
+            <label for="musicTypes">Elija algunos tipos de música, luego haga clic en el botón de
+                abajo:</label>
+            <select id="musicTypes" name="musicTypes" multiple="multiple">
+                <option selected="selected">R&B</option>
+                <option>Jazz</option>
+                <option>Blues</option>
+                <option>New Age</option>
+                <option>Classical</option>
+                <option>Opera</option>
+            </select>
+        </p>
+        <p><input id="btn" type="button" value="¿Cuántos están seleccionados?" /></p>
+    </form>
 </body>
+<script src="codigo.js"></script>
+
 </html>
