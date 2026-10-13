@@ -15,7 +15,7 @@ document.getElementById("verCarrito").addEventListener("click", function () {
     console.log(e.cantidad, e.producto);
     total += parseInt(e.cantidad);
   });
-  console.log(total);
+  console.log("El total es: " + total);
 });
 
 
