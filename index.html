@@ -1,12 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="codigo.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis enlaces</title>
+  <style>
+    :root {
+      --fondo: #f7f6f2;
+      --texto: #22262b;
+      --suave: #6b7280;
+      --acento: #1f5f8b;
+      --linea: #dcdad2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: 100%;
+      max-width: 36rem;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    p.intro {
+      margin: 0 0 2rem;
+      color: var(--suave);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--linea);
+    }
+
+    li { border-bottom: 1px solid var(--linea); }
+
+    a {
+      display: block;
+      padding: 1rem 0.25rem;
+      color: var(--texto);
+      text-decoration: none;
+      font-size: 1.15rem;
+    }
+
+    a:hover { color: var(--acento); padding-left: 0.75rem; }
+    a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+    a { transition: padding-left 0.15s ease, color 0.15s ease; }
+
+    @media (prefers-reduced-motion: reduce) {
+      a { transition: none; }
+    }
+  </style>
 </head>
 <body>
-    <p>Hello, World!</p>
+  <main>
+    <h1>Mis enlaces</h1>
+    <p class="intro">Elige una de las opciones para continuar.</p>
+
+    <ul>
+      <!-- Sustituye href="#" por la dirección de cada página -->
+      <li><a href="https://agustinemp.github.io/DWEC/25092026_ControlDeFlujo/">25092026_ControlDeFlujo</a></li>
+      <li><a href="https://agustinemp.github.io/DWEC/dosPrimeraEntrega/">dosPrimeraEntrega</a></li>
+      <li><a href="https://agustinemp.github.io/DWEC/Ejercicio_Bucles/">Ejercicio_Bucles</a></li>
+      <li><a href="https://agustinemp.github.io/DWEC/Ejercicio_Formulario/">Ejercicio_Formulario</a></li>
+      <li><a href="https://agustinemp.github.io/DWEC/Ejercicio_POO/">Ejercicio_POO</a></li>
+      <li><a href="https://agustinemp.github.io/DWEC/Ejercicio1/">Ejercicio1</a></li>
+      <li><a href="https://agustinemp.github.io/DWEC/practica1/">practica1</a></li>
+      <li><a href="https://agustinemp.github.io/DWEC/tresCarritoCompra/">tresCarritoCompra</a></li>
+
+    </ul>
+  </main>
 </body>
 </html>
