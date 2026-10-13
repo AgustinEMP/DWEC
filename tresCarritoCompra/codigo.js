@@ -10,8 +10,11 @@ document.getElementById("comprar").addEventListener("click", function () {
 });
 
 document.getElementById("verCarrito").addEventListener("click", function () {
+  var total = 0;
     carrito.forEach(e => {
         console.log(e.cantidad, e.producto);
+        total += parseInt(e.cantidad);
+        console.log(total);
     });
 });
 
