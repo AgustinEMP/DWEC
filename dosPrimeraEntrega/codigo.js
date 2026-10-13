@@ -26,7 +26,7 @@ function Tiempo(anio, mes, dia, hora, minuto, segundo) {
         this.segundo = segundo;
     }
 
-    this.getAnio = getAnio;
+    //this.getAnio = getAnio;
     this.getMes = getMes;
     this.getDia = getDia;
     this.getHora = getHora;
@@ -50,7 +50,11 @@ function Tiempo(anio, mes, dia, hora, minuto, segundo) {
 
 }
 
-function getAnio() {
+// function getAnio() {
+//     return this.anio;
+// }
+
+Tiempo.prototype.getAnio = function() {
     return this.anio;
 }
 
