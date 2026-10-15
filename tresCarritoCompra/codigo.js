@@ -1,26 +1,3 @@
-var carrito = [];
-var cantidad = document.getElementById("cantidad");
-var producto = document.getElementById("producto");
-
-document.getElementById("comprar").addEventListener("click", function () {
-  carrito.push({
-    cantidad: cantidad.value,
-    producto: producto.value
-  });
-});
-
-document.getElementById("verCarrito").addEventListener("click", function () {
-  var total = 0;
-  carrito.forEach(e => {
-    console.log(e.cantidad, e.producto);
-    total += parseInt(e.cantidad);
-  });
-  console.log("El total es: " + total);
-});
-
-
-
-//FUNCION PARA CREAR LA COOKIE
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -31,7 +8,6 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + value + ";" + expires + ";path=/";
 }
 
-// FUNCION PARA LEER LA COOKIE
 function getCookie(cname) {
   const name = cname + "=";
   const ca = document.cookie.split(";");
@@ -53,18 +29,48 @@ function getCookie(cname) {
   return null;
 }
 
+var carrito = getCookie("carrito");
 
-//creamos la cookie
-setCookie("comida", "manzanas", 7);
+if (carrito == null) {
+  carrito = [];
+}
+var cantidad = document.getElementById("cantidad");
+var producto = document.getElementById("producto");
 
-setCookie("carrito", JSON.stringify(carrito), 7);
+var btnComprar = document.getElementById("comprar");
+var btnVer = document.getElementById("verCarrito");
 
-//leemos la cookie
-console.log("El valor de comida es: " + getCookie("comida"));
+if (btnComprar) {
+  btnComprar.addEventListener("click", function () {
+    if (cantidad.value == "" || producto.value == "") {
+      console.log("Rellena la cantidad y el producto.");
+    } else {
+      carrito.push({
+        cantidad: parseInt(cantidad.value),
+        producto: producto.value
+      });
 
-setCookie("comida", "churros", 7);
-var valor = getCookie("comida");
-var guardado = getCookie("carrito");
-console.log("El valor de comida es: " + valor);
+      setCookie("carrito", carrito, 7);
 
+      cantidad.value = "";
+      producto.value = "";
+    }
+  });
+}
 
+if (btnVer) {
+  btnVer.addEventListener("click", function () {
+    var datos = getCookie("carrito");
+    var total = 0;
+
+    if (datos == null) {
+      console.log("El carrito está vacío.");
+    } else {
+      datos.forEach(function (e) {
+        console.log(e.cantidad + " " + e.producto);
+        total += e.cantidad;
+      });
+      console.log("El total es: " + total);
+    }
+  });
+}
