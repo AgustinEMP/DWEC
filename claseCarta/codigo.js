@@ -45,7 +45,7 @@ class Carta {
         var mostrarNumero;
         var mostrarPalo;
 
-        switch (this.numero) {
+        switch (this.getNumero()) {
             case 1:
                 mostrarNumero = "As";
                 break;
@@ -63,11 +63,11 @@ class Carta {
                 break;
         
             default:
-                mostrarNumero = this.numero;
+                mostrarNumero = this.getPalo();
                 break;
         }
 
-        switch (this.palo) {
+        switch (this.getPalo()) {
             case "c":
                 mostrarPalo = "Corazon";
                 break;
@@ -85,7 +85,7 @@ class Carta {
                 break;
         
             default:
-                mostrarPalo = this.palo;
+                mostrarPalo = this.getPalo();
                 break;
         }
 
@@ -95,14 +95,14 @@ class Carta {
     comparar(carta) {
         let resultado = 0;
 
-        if (this.numero < carta.getNumero()) {
+        if (this.getNumero() < carta.getNumero()) {
             resultado = -1;
-        } else if (this.numero > carta.getNumero()) {
+        } else if (this.getNumero() > carta.getNumero()) {
             resultado = 1;
         } else {
-            if (ordenPalo[this.palo] > ordenPalo[carta.getPalo()]) {
+            if (ordenPalo[this.getPalo()] > ordenPalo[carta.getPalo()]) {
                 resultado = 1;
-            } else if (ordenPalo[this.palo] < ordenPalo[carta.getPalo()]) {
+            } else if (ordenPalo[this.getPalo()] < ordenPalo[carta.getPalo()]) {
                 resultado = -1;
             }
         }
