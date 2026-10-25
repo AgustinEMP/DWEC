@@ -205,6 +205,10 @@ try {
     
     console.log("Resultado: " + carta10.comparar(carta11));
 
+    //Mostrar errores de excepciones
+    const carta12 = new Carta(15, "r");
+    const carta13 = new Carta(10, "x");
+
 } catch (e) {
     console.log(e.mensaje);
 }
