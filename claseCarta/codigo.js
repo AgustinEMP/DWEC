@@ -8,7 +8,7 @@ const ordenPalo = {
 class ExcepcionesCarta extends Error {
     constructor(mensaje) {
         super(mensaje);
-        this.nombre = "ExcepcionesCarta";
+        this.name = "ExcepcionesCarta";
     }
 }
 
@@ -208,8 +208,12 @@ try {
     console.log("\n===== ERROR DE EXCEPCIONES =====");
     //Mostrar errores de excepciones
     const carta12 = new Carta(15, "r");
-    const carta13 = new Carta(10, "x");
-
+    
 } catch (e) {
-    console.log(e.mensaje);
+    console.log(e.message);
+}
+try {
+    const carta13 = new Carta(10, "x");
+} catch (error) {
+    console.log(error.message)
 }
