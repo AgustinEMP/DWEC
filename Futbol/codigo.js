@@ -58,7 +58,7 @@ class Jugador {
 }
 
 class Equipo {
-    constructor(Jugador) {
+    constructor() {
         this.jugadores = [];
     }
 
