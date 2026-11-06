@@ -35,3 +35,23 @@ btn.addEventListener("click", () => {
     const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
     document.body.style.backgroundColor = rndCol;
 });
+
+let caja = document.querySelector("#entrada");
+
+caja.addEventListener("keyup", ()=> {
+    let d = document.querySelector("#contenido");
+    d.innerHTML = caja.value;
+
+});
+
+caja.addEventListener("mouseover", (contenido) => {
+    alert("Has pasado por encima. La coordenada X: " + contenido.clientX + " Coordena Y: " + contenido.clientY);
+});
+
+
+let miVentana = document.querySelector("body");
+let cajita = document.getElementById("VerCoordenadas");
+
+miVentana.addEventListener("mousemove", (context) => {
+    cajita.innerHTML = '(${context.clientX)';
+});
