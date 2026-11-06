@@ -30,7 +30,7 @@ miVentana.addEventListener("keydown", (contexto) => {
     }
 });
 
-miVentana.addEventListener("keyup", (contexto) => {
+miVentana.addEventListener("keyup", () => {
     tom.src = "tom.avif"
 });
 
