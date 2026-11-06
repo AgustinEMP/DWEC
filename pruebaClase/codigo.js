@@ -11,7 +11,7 @@ console.log(PI);
 //OBJETOS EN JS
 
 //var obj1 = {marca: "seat", modelo: "ibiza", color: "rojo"};
-const obj1 = {marca: "seat", modelo: "ibiza", color: "rojo"};
+const obj1 = { marca: "seat", modelo: "ibiza", color: "rojo" };
 console.log(obj1.marca);
 obj1.marca = "audi";
 console.log(obj1.marca);
@@ -24,3 +24,14 @@ x = "verde";
 console.log(x + 1); //verde
 x = "1";
 console.log(parseInt(x) + 1); //2
+
+const btn = document.querySelector("button");
+
+function random(number) {
+    return Math.floor(Math.random() * (number + 1));
+}
+
+btn.addEventListener("click", () => {
+    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    document.body.style.backgroundColor = rndCol;
+});
