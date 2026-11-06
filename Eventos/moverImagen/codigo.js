@@ -31,18 +31,19 @@ miVentana.addEventListener("keydown", (contexto) => {
 });
 
 miVentana.addEventListener("keyup", () => {
-    tom.src = "tom.avif"
+    tom.src = "tom.avif";
 });
 
 
 let btnTom = document.getElementById("btnTom");
 
 btnTom.addEventListener("click", () => {
+    tom.src = "tom.avif";
 });
 
 let btnTomMovimiento = document.getElementById("btnTomMovimiento");
 
 btnTomMovimiento.addEventListener("click", () => {
-    tom.src = "tomMoviendose.gif"
+    tom.src = "tomMoviendose.gif";
 });
 
