@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Baraja de cartas</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        #botones { margin-bottom: 20px; }
+        button, select { padding: 8px 14px; margin-right: 6px; }
+        #mazo { width: 120px; display: block; }
+        #contador { margin: 8px 0 20px; }
+        #robadas { display: flex; flex-wrap: wrap; gap: 8px; min-height: 180px;
+                   border: 1px dashed #999; padding: 10px; }
+        #robadas img { width: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Baraja de cartas</h1>
+ 
+    <div id="botones">
+        <select id="tipo">
+            <option value="es">Española (48)</option>
+            <option value="fr">Francesa (52)</option>
+        </select>
+        <button id="btnCrear">Crear</button>
+        <button id="btnBarajar">Barajar</button>
+        <button id="btnCortar">Cortar</button>
+        <button id="btnRobar">Robar</button>
+    </div>
+ 
+    <img id="mazo" alt="Mazo">
+    <div id="contador"></div>
+ 
+    <h3>Cartas robadas</h3>
+    <div id="robadas"></div>
+ 
+    <script src="codigo.js"></script>
+</body>
+</html>
